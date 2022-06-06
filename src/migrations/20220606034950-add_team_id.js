@@ -4,7 +4,7 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.addColumn('Players','team_id',{
       type:Sequelize.INTEGER,
-      allowNull:true,
+      allowNull:false,
       references: {
         model: 'Teams',
         key: 'team_id'
