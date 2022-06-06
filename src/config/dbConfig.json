@@ -1,17 +1,10 @@
 {
     "development":{
-            "host":"localhost",
-            "user":"root",
+            "host":"127.0.0.1",
+            "username":"root",
             "database":"SportDBSequelize",
-            "password":"",
-            "multipleStatements": true,
-            "dialect":"mysql",
-            "pool":{
-                "max":5,
-                "min":0,
-                "acquire":30000,
-                "idle":10000
-            }
+            "password":null,
+            "dialect":"mysql"
     },
     "test":{
 

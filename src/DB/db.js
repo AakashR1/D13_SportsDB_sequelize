@@ -28,4 +28,13 @@ db.sequelize.sync({force:false})
   console.log('sync is done....');
 })
 
+db.teams.hasMany(db.player,{
+  foreignKey:"team_id"
+});
+
+db.player.belongsTo(db.teams,{
+  foreignKey:"team_id"
+});
+
+
 module.exports = db;

@@ -4,8 +4,8 @@ const Player = db.player
 const addPlayer =async (req, res) => {
     try {
         console.log(req.body);
-        await Player.create(req.body)
-        res.send("Player added...")
+        const user = await Player.create(req.body)
+        res.send(`Player added...${user.player_id}`)
 
     } catch (error) {
         console.log(error);

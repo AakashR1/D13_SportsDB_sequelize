@@ -13,7 +13,8 @@ routes.get('/getPlayer/:PlayerId',playerController.getPlayer);
 
 routes.delete('/deletePlayer/:PlayerId',playerController.deletePlayer);
 
-routes.get('/getAllPlayer',playerController.getAllPlayers)
+routes.get('/getAllPlayer',playerController.getAllPlayers);
+
 
 
 module.exports = routes;

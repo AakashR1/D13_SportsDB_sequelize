@@ -1,5 +1,6 @@
 const db= require('../DB/db');
 const Team = db.teams;
+const Player = db.player;
 
 const addTeam =async (req, res) => {
     try {
@@ -58,10 +59,20 @@ const deleteTeam =async (req,res)=>{
     }
 }
 
+const teamWithPlayer = async (req,res)=>{
+    try {
+        const data = await Team.findAll({include:Player});
+        res.send(data);
+    } catch (error) {
+        console.log(error);
+        res.send(error);
+    }
+}
 module.exports = {
     addTeam,
     updateTeam,
     getAllTeamsAndId,
     getTeamName,
-    deleteTeam
+    deleteTeam,
+    teamWithPlayer
 }
